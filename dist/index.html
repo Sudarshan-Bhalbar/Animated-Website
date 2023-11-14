@@ -1,11 +1,69 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
-    <h1 class="text-center bg-slate-950 text-slate-100">Hello World</h1>
-</body>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="bg-slate-200 py-4">
+      <div class="max-w-5xl mx-auto px-8 flex justify-between">
+        <!-- Logo -->
+            <div class="font-extrabold text-2xl text-slate-50">
+              <span class="text-yellow-500">X</span>
+              <span>O</span>
+              <span class="text-yellow-500">Y</span>
+              <span>O</span>
+            </div>
+            <!-- Primary Nav -->
+            <div class="hidden md:flex gap-5 font-medium text-base w-1/2  text-slate-500 items-center justify-center">
+              <h1>HOME</h1>
+              <h1>PRICING</h1>
+              <h1>ABOUT</h1>
+            </div>
+           <!-- Secondary Nav -->
+          <div class="hidden md:flex items-center gap-5">
+            <div class="font-medium text-base text-slate-500">LOGIN</div>
+            <div class="px-4 py-2 bg-yellow-400 rounded-lg font-medium text-gray-100">SIGNUP</div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="nav-menu-btn  md:hidden flex justify-center items-center">
+            <i class="ri-menu-3-line ri-xl"></i>
+          </div>
+
+
+        </div>
+      </div>
+      
+          <!-- Mobile Menu -->
+          <div class=" h-screen hidden w-52 bg-gray-300 nav-menu md:hidden fixed top-0 right-0">
+          <div class="w-fit h-fit text-slate-700 flex flex-col gap-3 px-5 py-3">
+            <button class="close-btn px-3 py-2">
+              <i class="ri-close-fill ri-2x"></i>
+            </button>
+            <a href="#" class="hover:text-white">Home</a>
+            <a href="#" class="hover:text-white">Pricing</a>
+
+          </div>
+        </div>
+    </nav>
+
+
+    <script>
+      const menu = document.querySelector(".nav-menu")
+      const btn = document.querySelector("div.nav-menu-btn")
+      const closeBtn = document.querySelector("button.close-btn")
+        btn.addEventListener("click",()=>{
+          menu.classList.toggle("hidden");
+        })
+        closeBtn.addEventListener("click",()=>{
+          menu.classList.toggle("hidden")
+        })
+      
+
+    </script>
+  </body>
 </html>
